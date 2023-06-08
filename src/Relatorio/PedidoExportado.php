@@ -17,8 +17,7 @@ class PedidoExportado implements ConteudoExportado
     {
         return [
             'nome_cliente' => $this->pedido->nomeCliente,
-            'data_finalizacao' => $this->pedido->dataFinalizacao,
-            'orcamento' => $this->pedido->orcamento
+            'data_finalizacao' => $this->pedido->dataFinalizacao->format('d/m/Y'),
         ];
     }
 }
